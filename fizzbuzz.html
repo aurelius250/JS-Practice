@@ -8,7 +8,22 @@
 </head>
 <body>
     <script> 
-    let userInput = prompt("Please enter a number to Fizz the Buzz");
+    let number = parseInt(prompt("Please enter a number to Fizz the Buzz"));
+    if(isNaN(number)) { 
+        alert("Please enter a number");
+    }
+    for(let i = 1; i <= number; i++) { 
+        if((i % 3 === 0) && (i % 5 === 0)) {
+            console.log("Fizzbuzz"); 
+        } else if(i % 3 === 0) { 
+            console.log("Fizz"); 
+        } else if(i % 5 === 0){ 
+            console.log("buzz"); 
+        } else { 
+            console.log(i);
+        }
+
+    }
     </script>
 </body>
 </html>
