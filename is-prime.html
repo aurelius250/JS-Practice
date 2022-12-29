@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    function primesUpTo(userInputPrimes){
+        for(let i = 2; i <= userInputPrimes; i++){ 
+            isPrime(i);
+        } 
+    }
+    function isPrime(numberToCheck){ 
+        for(let i = 2; i <= Math.sqrt(numberToCheck); i++){ 
+            if(numberToCheck % i == 0){ 
+                return;
+            } 
+        }
+        alert(`${numberToCheck} is prime!!!!!!!!!!`);
+
+    }
+    let userInputPrimes = prompt("Please enter primes you would see up to"); 
+    primesUpTo(userInputPrimes)
+    </script>
+</body>
+</html>
