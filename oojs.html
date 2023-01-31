@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+
+      const beachHouse = { 
+        name: "Beach House", 
+        nationality: "American", 
+        genre: "Dream Pop", 
+        members: 2,
+        formed: "2004", 
+        split: false,
+        albumOne: { 
+          albumName: "Bloom",
+          released: 2012
+        }, 
+        albumTwo: { 
+          albumName: "Teen Dream", 
+          released: 2010
+
+        },
+
+        albums: [ 
+             { 
+              albumName: "Teen Dream", 
+              released: 2010
+            },
+            { 
+              albumName: "Bloom",
+              released: 2012
+            }
+        ],
+
+        bio(){ 
+          let bandInfo = `${this.name} is a ${this.nationality} based ${this.genre} band formed in ${this.formed} with members Victoria Legrand and Alex Scally. Their albums include ${this.albumOne.albumName}, released in ${this.albumOne.released}.`
+          return bandInfo; 
+        }
+      }
+
+      console.log(beachHouse.albums);
+      // const person = { 
+      //   name: ["Bob", "Smith"],
+      //   height: { 
+      //     short: "5 foot", 
+      //     tall: "9 foot",
+      //   },
+      //   age: 32, 
+      //   bio: function () { 
+      //     console.log(`${this.name[0]} ${this.name[1]} is ${this.age} years old`);
+      //   }, 
+      //   introduceSelf: function () { 
+      //     console.log(`Hi! I'm ${this.name[0]}.`);
+      //   }
+      //   }
+
+      //   const myKeyName = "height";
+      //   const myKeyValue = "7.5m on a bad day"; 
+      //   person[myKeyName] = myKeyValue; 
+      //   console.log(person[myKeyName]);
+
+      //   function createPerson(name){ 
+      //     const obj = {}; 
+      //     obj.name = name; 
+      //     obj.introduceSelf = function() { 
+      //       console.log(`Hi! I'm ${this.name}.`); 
+          
+      //     }
+      //     return obj; 
+      //   } 
+
+      //   function Person(name){ 
+      //     this.name = name; 
+      //     this.introduceSelf = function () { 
+      //       console.log(`Hi I'm ${this.name}.`); 
+      //     }
+      //   }
+      //   const myNotification = new Notification("Hello!");
+      //   console.log(myNotification("Hell"));
+      //   const brandon = new Person("Brandon");
+      //   console.log(Brandon.introduceSelf());
+    </script>
+</html>
